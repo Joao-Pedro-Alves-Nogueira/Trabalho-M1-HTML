@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro de Clientes</title>
 </head>
-<body>
-    
+<body style="background-color: #F5F5DC; color: #4B3621;">
+    <center><header><img src="imagens/logo_livraria.png" alt="Logo" width="300"><h1>Novo Cliente</h1></header></center>
+    <main>
+        <form>
+            <label>Nome:</label><br><input type="text" name="nome"><br>
+            <label>E-mail:</label><br><input type="email" name="email"><br>
+            <label>Telefone:</label><br><input type="tel" name="tel"><br>
+            <label>Data Nasc:</label><br><input type="date" name="nasc"><br>
+            <label>Gênero Favorito:</label><br>
+            <select name="genero">
+                <option>Ficção</option>
+                <option>Terror</option>
+                <option>Romance</option>
+            </select><br><br>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p><a href="index.html">Voltar ao Início</a></p>
+    </main>
 </body>
 </html>
