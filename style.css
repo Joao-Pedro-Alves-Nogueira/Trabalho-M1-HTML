@@ -1,0 +1,119 @@
+/* 1. Definições Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1ea; /* Bege claro moderno */
+    color: #332c28; /* Marrom escuro para leitura */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* 2. Cabeçalho e Rodapé */
+header, footer {
+    background-color: #4b3621;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header img {
+    border-radius: 50%; /* Deixa a logo circular */
+    border: 3px solid #d4a373;
+}
+
+/* 3. Navegação (Menu) */
+nav {
+    background-color: #d4a373;
+    padding: 10px;
+    text-align: center;
+    position: sticky; /* Menu fixo no topo ao rolar */
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #4b3621;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 5px 10px;
+    transition: 0.3s; /* Suaviza a animação */
+}
+
+nav a:hover {
+    background-color: #4b3621;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* 4. Conteúdo Principal */
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+    border-radius: 8px;
+}
+
+/* 5. Tabelas Modernas */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove espaços entre bordas */
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4b3621;
+    color: white;
+}
+
+tr:nth-child(even) { background-color: #f9f9f9; } /* Linhas zebradas */
+
+/* 6. Formulários Estilizados */
+fieldset {
+    border: 2px solid #d4a373;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #4b3621;
+    padding: 0 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+}
+
+button {
+    background-color: #4b3621;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d4a373;
+}
+
+/* 7. Listas e Glossários */
+dt { font-weight: bold; color: #4b3621; font-size: 1.1em; }
+dd { margin-bottom: 15px; font-style: italic; }
