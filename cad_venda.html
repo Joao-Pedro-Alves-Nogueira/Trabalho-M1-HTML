@@ -6,19 +6,78 @@
     <title>Registro de Vendas</title>
 </head>
 <body style="background-color: #F5F5DC; color: #4B3621;">
-    <center><header><img src="imagens/logo_livraria.png" alt="Logo" width="300"><h1>Nova Venda</h1></header></center>
+<center>
+        <header>
+            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
+            <h1>Frente de Caixa</h1>
+            <p><i>Módulo de registro de vendas e emissão de cupom fiscal</i></p>
+        </header>
+    </center>
+
     <main>
-        <form>
-            <label>ID do Livro:</label><br><input type="number" name="id_livro"><br>
-            <label>ID do Cliente:</label><br><input type="number" name="id_cli"><br>
-            <label>Quantidade:</label><br><input type="number" name="qtd"><br>
-            <label>Forma de Pagamento:</label><br>
-            <input type="radio" name="pag"> Pix 
-            <input type="radio" name="pag"> Cartão<br>
-            <label>Observações:</label><br><textarea name="obs"></textarea><br><br>
-            <button type="submit">Finalizar Venda</button>
+        <section>
+            <p>Atenção, <b>operador de caixa</b>: Confira os dados do livro e a forma de pagamento antes de finalizar a transação.</p>
+        </section>
+
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend><b>1. Dados do Cliente e Operador</b></legend>
+                <label>CPF do Cliente:</label><br>
+                <input type="text" name="cpf_cli" size="14" maxlength="14" placeholder="000.000.000-00"><br><br>
+
+                <label>Código do Vendedor / Operador: *</label><br>
+                <input type="text" name="cod_vend" size="10" required><br><br>
+
+                <label>Data da Venda:</label><br>
+                <input type="date" name="data_venda" required>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend><b>2. Itens da Compra</b></legend>
+                <label>Código ISBN do Livro: *</label><br>
+                <input type="number" name="isbn_livro" required placeholder="Digite os 13 dígitos"><br><br>
+
+                <label>Quantidade: *</label><br>
+                <input type="number" name="qtd" min="1" max="50" value="1" required><br><br>
+                
+                <label>Desconto Autorizado pela Gerência (%):</label><br>
+                <input type="number" name="desconto" min="0" max="100" value="0">
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend><b>3. Fechamento e Pagamento</b></legend>
+                <label>Forma de Pagamento Principal: *</label><br>
+                <input type="radio" name="forma_pag" value="pix" required> Pix (QR Code)<br>
+                <input type="radio" name="forma_pag" value="credito"> Cartão de Crédito<br>
+                <input type="radio" name="forma_pag" value="debito"> Cartão de Débito<br>
+                <input type="radio" name="forma_pag" value="dinheiro"> Dinheiro em Espécie<br><br>
+
+                <label>Observações na Nota Fiscal (Opcional):</label><br>
+                <textarea name="obs" rows="3" cols="50" placeholder="Ex: Venda corporativa, solicitar embalagem para presente..."></textarea>
+            </fieldset>
+            <br>
+
+            <center>
+                <button type="submit">Emitir Cupom e Finalizar Venda</button>
+                <button type="reset">Cancelar Operação</button>
+            </center>
+
         </form>
-        <p><a href="index.html">Voltar ao Início</a></p>
+
+        <br><br>
+        <center>
+            <p><a href="index.html" style="color: #4B3621;"><b> Voltar ao Painel Principal </b></a></p>
+        </center>
     </main>
+
+    <center>
+        <footer>
+            <hr>
+            <p><small>Livraria Página Certa - Terminal de Vendas</small></p>
+        </footer>
+    </center>
 </body>
 </html>

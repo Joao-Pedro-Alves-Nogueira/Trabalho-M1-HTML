@@ -6,22 +6,92 @@
     <title>Cadastro de Clientes</title>
 </head>
 <body style="background-color: #F5F5DC; color: #4B3621;">
-    <center><header><img src="imagens/logo_livraria.png" alt="Logo" width="300"><h1>Novo Cliente</h1></header></center>
+<center>
+        <header>
+            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
+            <h1>Módulo de Clientes</h1>
+            <p><i>Registro de novos consumidores para o programa de fidelidade</i></p>
+        </header>
+    </center>
+
     <main>
-        <form>
-            <label>Nome:</label><br><input type="text" name="nome"><br>
-            <label>E-mail:</label><br><input type="email" name="email"><br>
-            <label>Telefone:</label><br><input type="tel" name="tel"><br>
-            <label>Data Nasc:</label><br><input type="date" name="nasc"><br>
-            <label>Gênero Favorito:</label><br>
-            <select name="genero">
-                <option>Ficção</option>
-                <option>Terror</option>
-                <option>Romance</option>
-            </select><br><br>
-            <button type="submit">Cadastrar</button>
+        <section>
+            <p>Preencha os dados abaixo com atenção. Os campos com asterisco (<b>*</b>) são obrigatórios para a emissão de Nota Fiscal e entrega de pedidos físicos.</p>
+        </section>
+
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend><b>1. Dados Pessoais</b></legend>
+                <label>Nome Completo: *</label><br>
+                <input type="text" name="nome" size="50" required placeholder="Ex: Maria da Silva"><br><br>
+
+                <label>CPF: *</label><br>
+                <input type="text" name="cpf" size="14" maxlength="14" required placeholder="000.000.000-00"><br><br>
+
+                <label>Data de Nascimento:</label><br>
+                <input type="date" name="nasc"><br>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend><b>2. Contato e Endereço</b></legend>
+                <label>E-mail: *</label><br>
+                <input type="email" name="email" size="40" required placeholder="cliente@email.com"><br><br>
+
+                <label>Telefone / WhatsApp:</label><br>
+                <input type="tel" name="tel" size="15" placeholder="(00) 00000-0000"><br><br>
+
+                <label>Endereço Completo (Rua, Número, Bairro):</label><br>
+                <input type="text" name="endereco" size="60"><br><br>
+
+                <label>Estado (UF):</label>
+                <select name="estado">
+                    <option value="">Selecione...</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PR">Paraná</option>
+                    <option value="OUTRO">Outro Estado</option>
+                </select>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend><b>3. Perfil de Leitura</b></legend>
+                <label>Gênero Literário Favorito:</label><br>
+                <select name="genero_fav">
+                    <option>Não Informado</option>
+                    <option>Ficção e Fantasia</option>
+                    <option>Romance e Drama</option>
+                    <option>Terror e Suspense</option>
+                    <option>Autoajuda e Negócios</option>
+                    <option>Biografias</option>
+                </select><br><br>
+
+                <input type="checkbox" name="newsletter" checked>
+                <label>O cliente aceita receber promoções da livraria por e-mail.</label>
+            </fieldset>
+            <br>
+
+            <center>
+                <button type="submit">Salvar Cliente no Sistema</button>
+                <button type="reset">Limpar Formulário</button>
+            </center>
+
         </form>
-        <p><a href="index.html">Voltar ao Início</a></p>
+
+        <br><br>
+        <center>
+            <p><a href="index.html" style="color: #4B3621;"><b> Voltar ao Painel Principal </b></a></p>
+        </center>
     </main>
+
+    <center>
+        <footer>
+            <hr>
+            <p><small>Livraria Página Certa - Controle de Clientes</small></p>
+        </footer>
+    </center>
 </body>
 </html>
