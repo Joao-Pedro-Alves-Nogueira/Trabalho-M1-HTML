@@ -1,77 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Vendas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-        <header>
-            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
-            <h1>Frente de Caixa</h1>
-            <p><i>Módulo de registro de vendas e emissão de cupom fiscal</i></p>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Vendas</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250" />
+        <h1>Frente de Caixa</h1>
+        <p><i>Módulo de registro de vendas e emissão de cupom fiscal</i></p>
+    </header>
 
     <main>
         <section>
-            <p>Atenção, <b>operador de caixa</b>: Confira os dados do livro e a forma de pagamento antes de finalizar a transação.</p>
+            <p>
+                Atenção, <b>operador de caixa</b>: Confira os dados do livro e a forma
+                de pagamento antes de finalizar a transação.
+            </p>
         </section>
 
-        <form action="#" method="POST">
-            
+        <form id="form-venda" action="#" method="POST" novalidate>
             <fieldset>
                 <legend><b>1. Dados do Cliente e Operador</b></legend>
-                <label>CPF do Cliente:</label><br>
-                <input type="text" name="cpf_cli" size="14" maxlength="14" placeholder="000.000.000-00"><br><br>
+                <label>CPF do Cliente:</label><br />
+                <input type="text" name="cpf_cli" size="14" maxlength="14" placeholder="000.000.000-00" /><br /><br />
 
-                <label>Código do Vendedor / Operador: *</label><br>
-                <input type="text" name="cod_vend" size="10" required><br><br>
+                <label>Código do Vendedor / Operador: *</label><br />
+                <input type="text" name="cod_vend" size="10" required /><br /><br />
 
-                <label>Data da Venda:</label><br>
-                <input type="date" name="data_venda" required>
+                <label>Data da Venda:</label><br />
+                <input type="date" name="data_venda" required />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>2. Itens da Compra</b></legend>
-                <label>Código ISBN do Livro: *</label><br>
-                <input type="number" name="isbn_livro" required placeholder="Digite os 13 dígitos"><br><br>
 
-                <label>Quantidade: *</label><br>
-                <input type="number" name="qtd" min="1" max="50" value="1" required><br><br>
-                
-                <label>Desconto Autorizado pela Gerência (%):</label><br>
-                <input type="number" name="desconto" min="0" max="100" value="0">
+                <div id="lista-itens">
+                    <div class="item-compra">
+                        <h4>Item 1</h4>
+                        <label>Código ISBN do Livro: *</label><br>
+                        <input type="number" name="isbn_livro[]" required placeholder="Digite os 13 dígitos"><br><br>
+
+                        <label>Quantidade: *</label><br>
+                        <input type="number" name="qtd[]" min="1" max="50" value="1" required><br><br>
+
+                        <label>Desconto Autorizado pela Gerência (%):</label><br>
+                        <input type="number" name="desconto[]" min="0" max="100" value="0">
+                    </div>
+                </div>
+
+                <button type="button" id="btn-adicionar-item">+ Adicionar Outro Livro</button>
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>3. Fechamento e Pagamento</b></legend>
-                <label>Forma de Pagamento Principal: *</label><br>
-                <input type="radio" name="forma_pag" value="pix" required> Pix (QR Code)<br>
-                <input type="radio" name="forma_pag" value="credito"> Cartão de Crédito<br>
-                <input type="radio" name="forma_pag" value="debito"> Cartão de Débito<br>
-                <input type="radio" name="forma_pag" value="dinheiro"> Dinheiro em Espécie<br><br>
+                <label>Forma de Pagamento Principal: *</label><br />
+                <input type="radio" name="forma_pag" value="pix" required /> Pix (QR
+                Code)<br />
+                <input type="radio" name="forma_pag" value="credito" /> Cartão de
+                Crédito<br />
+                <input type="radio" name="forma_pag" value="debito" /> Cartão de
+                Débito<br />
+                <input type="radio" name="forma_pag" value="dinheiro" /> Dinheiro em
+                Espécie<br /><br />
 
-                <label>Observações na Nota Fiscal (Opcional):</label><br>
-                <textarea name="obs" rows="3" cols="50" placeholder="Ex: Venda corporativa, solicitar embalagem para presente..."></textarea>
+                <label>Observações na Nota Fiscal (Opcional):</label><br />
+                <textarea name="obs" rows="3" cols="50"
+                    placeholder="Ex: Venda corporativa, solicitar embalagem para presente..."></textarea>
             </fieldset>
-            <br>
+            <br />
 
-                <button type="submit">Emitir Cupom e Finalizar Venda</button>
-                <button type="reset">Cancelar Operação</button>
-
+            <button type="submit">Emitir Cupom e Finalizar Venda</button>
+            <button type="reset">Cancelar Operação</button>
         </form>
 
-        <br><br>
-            <p><a href="index.html"><b> Voltar ao Painel Principal </b></a></p>
+        <br /><br />
+        <p>
+            <a href="index.html"><b> Voltar ao Painel Principal </b></a>
+        </p>
     </main>
 
-        <footer>
-            <hr>
-            <p><small>Livraria Página Certa - Terminal de Vendas</small></p>
-        </footer>
+    <footer>
+        <hr />
+        <p><small>Livraria Página Certa - Terminal de Vendas</small></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

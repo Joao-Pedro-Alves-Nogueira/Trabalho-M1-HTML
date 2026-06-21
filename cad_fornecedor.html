@@ -1,71 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Fornecedor</title>
-        <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-        <header>
-            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
-            <h1>Homologação de Fornecedores</h1>
-            <p><i>Cadastro de editoras, distribuidoras e parceiros logísticos</i></p>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Fornecedor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250" />
+        <h1>Homologação de Fornecedores</h1>
+        <p><i>Cadastro de editoras, distribuidoras e parceiros logísticos</i></p>
+    </header>
 
     <main>
         <section>
-            <p>Preencha os dados da empresa parceira para permitir a emissão de notas fiscais de entrada e programação de pagamentos pelo setor financeiro.</p>
+            <p>
+                Preencha os dados da empresa parceira para permitir a emissão de notas
+                fiscais de entrada e programação de pagamentos pelo setor financeiro.
+            </p>
         </section>
 
-        <form action="#" method="POST">
-            
+        <form action="#" method="POST" novalidate>
             <fieldset>
                 <legend><b>1. Identificação da Empresa</b></legend>
-                <label>Razão Social: *</label><br>
-                <input type="text" name="razao_social" size="60" required placeholder="Ex: Editora Companhia das Letras S.A."><br><br>
+                <label>Razão Social: *</label><br />
+                <input type="text" name="razao_social" size="60" required
+                    placeholder="Ex: Editora Companhia das Letras S.A." /><br /><br />
 
-                <label>Nome Fantasia:</label><br>
-                <input type="text" name="nome_fantasia" size="40" placeholder="Ex: Cia das Letras"><br><br>
+                <label>Nome Fantasia:</label><br />
+                <input type="text" name="nome_fantasia" size="40" placeholder="Ex: Cia das Letras" /><br /><br />
 
-                <label>CNPJ: *</label><br>
-                <input type="text" name="cnpj" size="18" maxlength="18" required placeholder="00.000.000/0000-00">
+                <label>CNPJ: *</label><br />
+                <input type="text" name="cnpj" size="18" maxlength="18" required placeholder="00.000.000/0000-00" />
                 &nbsp;&nbsp;&nbsp;
                 <label>Inscrição Estadual (IE):</label>
-                <input type="text" name="ie" size="15" placeholder="Apenas números">
+                <input type="text" name="ie" size="15" placeholder="Apenas números" />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>2. Contato e Localização</b></legend>
-                
-                <label>Nome do Representante Comercial:</label><br>
-                <input type="text" name="representante" size="40" placeholder="Nome de quem atende a nossa livraria"><br><br>
 
-                <label>E-mail do Setor de Vendas/Faturamento: *</label><br>
-                <input type="email" name="email_fornecedor" size="40" required placeholder="vendas@editora.com.br"><br><br>
+                <label>Nome do Representante Comercial:</label><br />
+                <input type="text" name="representante" size="40"
+                    placeholder="Nome de quem atende a nossa livraria" /><br /><br />
 
-                <label>Telefone Principal:</label><br>
-                <input type="tel" name="tel_fornecedor" size="15" placeholder="(00) 0000-0000"><br><br>
+                <label>E-mail do Setor de Vendas/Faturamento: *</label><br />
+                <input type="email" name="email_fornecedor" size="40" required
+                    placeholder="vendas@editora.com.br" /><br /><br />
 
-                <label>Cidade Sede:</label><br>
-                <input type="text" name="cidade_fornecedor" size="30">
+                <label>Telefone Principal:</label><br />
+                <input type="tel" name="tel_fornecedor" size="15" placeholder="(00) 0000-0000" /><br /><br />
+
+                <label>Cidade Sede:</label><br />
+                <input type="text" name="cidade_fornecedor" size="30" />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>3. Dados Comerciais</b></legend>
-                
-                <label>Tipo de Material Fornecido:</label><br>
-                <input type="checkbox" name="tipo_prod" value="nacionais"> Livros Nacionais<br>
-                <input type="checkbox" name="tipo_prod" value="importados"> Livros Importados<br>
-                <input type="checkbox" name="tipo_prod" value="papelaria"> Itens de Papelaria e Presentes<br><br>
 
-                <label>Prazo Médio de Entrega (em dias úteis):</label><br>
-                <input type="number" name="prazo_entrega" min="1" max="90" value="7"><br><br>
+                <label>Tipo de Material Fornecido:</label><br />
+                <input type="checkbox" name="tipo_prod" value="nacionais" /> Livros
+                Nacionais<br />
+                <input type="checkbox" name="tipo_prod" value="importados" /> Livros
+                Importados<br />
+                <input type="checkbox" name="tipo_prod" value="papelaria" /> Itens de
+                Papelaria e Presentes<br /><br />
 
-                <label>Condição de Pagamento Padrão:</label><br>
+                <label>Prazo Médio de Entrega (em dias úteis):</label><br />
+                <input type="number" name="prazo_entrega" min="1" max="90" value="7" /><br /><br />
+
+                <label>Condição de Pagamento Padrão:</label><br />
                 <select name="condicao_pag">
                     <option value="avista">À Vista (Boleto Antecipado)</option>
                     <option value="15d">Faturamento 15 dias</option>
@@ -74,23 +83,24 @@
                     <option value="consignacao">Consignação</option>
                 </select>
             </fieldset>
-            <br>
+            <br />
 
-                <button type="submit">Cadastrar Fornecedor</button>
-                <button type="reset">Limpar Dados</button>
+            <button type="submit">Cadastrar Fornecedor</button>
+            <button type="reset">Limpar Dados</button>
         </form>
 
-        <br><br>
+        <br /><br />
 
-            <p><a href="index.html"><b>Voltar ao Painel Principal</b></a></p>
-
+        <p>
+            <a href="index.html"><b>Voltar ao Painel Principal</b></a>
+        </p>
     </main>
 
-
-        <footer>
-            <hr>
-            <p><small>Livraria Página Certa - Setor de Compras e Logística</small></p>
-        </footer>
-
+    <footer>
+        <hr />
+        <p><small>Livraria Página Certa - Setor de Compras e Logística</small></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

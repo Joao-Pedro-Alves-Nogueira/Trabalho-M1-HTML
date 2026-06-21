@@ -1,47 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Livros</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-        <header>
-            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
-            <h1>Gestão de Estoque</h1>
-            <p><i>Módulo de entrada de novos títulos no acervo</i></p>
-        </header>
+    <header>
+        <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250" />
+        <h1>Gestão de Estoque</h1>
+        <p><i>Módulo de entrada de novos títulos no acervo</i></p>
+    </header>
 
     <main>
         <section>
             <p>Cadastre os novos livros que chegaram do Centro de Distribuição.</p>
         </section>
 
-        <form action="#" method="POST">
-            
+        <form action="#" method="POST" novalidate>
             <fieldset>
                 <legend><b>1. Dados Principais da Obra</b></legend>
-                <label>Título do Livro: *</label><br>
-                <input type="text" name="titulo" size="60" required placeholder="Ex: O Senhor dos Anéis: A Sociedade do Anel"><br><br>
+                <label>Título do Livro: *</label><br />
+                <input type="text" name="titulo" size="60" required
+                    placeholder="Ex: O Senhor dos Anéis: A Sociedade do Anel" /><br /><br />
 
-                <label>Código ISBN: *</label><br>
-                <input type="number" name="isbn" required placeholder="Apenas números"><br><br>
+                <label>Código ISBN: *</label><br />
+                <input type="number" name="isbn" required placeholder="Apenas números" /><br /><br />
 
-                <label>Nome do Autor / Autora:</label><br>
-                <input type="text" name="autor" size="40" placeholder="Ex: J.R.R. Tolkien"><br><br>
+                <label>Nome do Autor / Autora:</label><br />
+                <input type="text" name="autor" size="40" placeholder="Ex: J.R.R. Tolkien" /><br /><br />
 
-                <label>Editora:</label><br>
-                <input type="text" name="editora" size="30" placeholder="Ex: HarperCollins">
+                <label>Editora:</label><br />
+                <input type="text" name="editora" size="30" placeholder="Ex: HarperCollins" />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>2. Classificação e Formato</b></legend>
-                
-                <label>Categoria principal do Livro: *</label><br>
-                <input type="text" name="categoria" list="sugestoes-categoria" required placeholder="Digite ou escolha da lista">
-                
+
+                <label>Categoria principal do Livro: *</label><br />
+                <input type="text" name="categoria" list="sugestoes-categoria" required
+                    placeholder="Digite ou escolha da lista" />
+
                 <datalist id="sugestoes-categoria">
                     <option value="Ficção Científica"></option>
                     <option value="Terror e Suspense"></option>
@@ -49,44 +52,48 @@
                     <option value="Fantasia"></option>
                     <option value="Autoajuda"></option>
                     <option value="História e Biografia"></option>
-                </datalist><br><br>
+                </datalist><br /><br />
 
-                <label>Ano de Publicação (desta edição):</label><br>
-                <input type="number" name="ano_pub" min="1500" max="2030" placeholder="Ex: 2026"><br><br>
+                <label>Ano de Publicação (desta edição):</label><br />
+                <input type="number" name="ano_pub" min="1500" max="2030" placeholder="Ex: 2026" /><br /><br />
 
-                <label>Formato Físico:</label><br>
-                <input type="radio" name="formato" value="comum" checked> Capa Comum (Brochura)<br>
-                <input type="radio" name="formato" value="dura"> Capa Dura<br>
-                <input type="radio" name="formato" value="bolso"> Edição de Bolso
+                <label>Formato Físico:</label><br />
+                <input type="radio" name="formato" value="comum" checked /> Capa Comum
+                (Brochura)<br />
+                <input type="radio" name="formato" value="dura" /> Capa Dura<br />
+                <input type="radio" name="formato" value="bolso" /> Edição de Bolso
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>3. Precificação e Quantidade</b></legend>
-                
-                <label>Preço de Venda (R$): *</label><br>
-                <input type="number" name="preco_venda" step="0.01" min="0" required placeholder="0.00"><br><br>
 
-                <label>Preço de Custo (R$):</label><br>
-                <input type="number" name="preco_custo" step="0.01" min="0" placeholder="0.00"><br><br>
+                <label>Preço de Venda (R$): *</label><br />
+                <input type="number" name="preco_venda" step="0.01" min="0" required placeholder="0.00" /><br /><br />
 
-                <label>Quantidade de exemplares recebidos: *</label><br>
-                <input type="number" name="qtd_estoque" min="1" value="1" required>
+                <label>Preço de Custo (R$):</label><br />
+                <input type="number" name="preco_custo" step="0.01" min="0" placeholder="0.00" /><br /><br />
+
+                <label>Quantidade de exemplares recebidos: *</label><br />
+                <input type="number" name="qtd_estoque" min="1" value="1" required />
             </fieldset>
-            <br>
+            <br />
 
-                <button type="submit">Cadastrar no Estoque</button>
-                <button type="reset">Limpar Formulário</button>
-
+            <button type="submit">Cadastrar no Estoque</button>
+            <button type="reset">Limpar Formulário</button>
         </form>
 
-        <br><br>
-            <p><a href="index.html"><b> Voltar ao Painel Principal </b></a></p>
+        <br /><br />
+        <p>
+            <a href="index.html"><b> Voltar ao Painel Principal </b></a>
+        </p>
     </main>
 
-        <footer>
-            <hr>
-            <p><small>Livraria Página Certa - Controle de Acervo e Estoque</small></p>
-        </footer>
+    <footer>
+        <hr />
+        <p><small>Livraria Página Certa - Controle de Acervo e Estoque</small></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

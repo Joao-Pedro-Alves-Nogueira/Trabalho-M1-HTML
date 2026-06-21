@@ -1,52 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Clientes</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-        <header>
-            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
-            <h1>Módulo de Clientes</h1>
-            <p><i>Registro de novos consumidores para o programa de fidelidade</i></p>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Clientes</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250" />
+        <h1>Módulo de Clientes</h1>
+        <p><i>Registro de novos consumidores para o programa de fidelidade</i></p>
+    </header>
 
     <main>
         <section>
-            <p>Preencha os dados abaixo com atenção. Os campos com asterisco (<b>*</b>) são obrigatórios para a emissão de Nota Fiscal e entrega de pedidos físicos.</p>
+            <p>
+                Preencha os dados abaixo com atenção. Os campos com asterisco
+                (<b>*</b>) são obrigatórios para a emissão de Nota Fiscal e entrega de
+                pedidos físicos.
+            </p>
         </section>
 
-        <form action="#" method="POST">
-            
+        <form id="form-cliente" action="#" method="POST" novalidate>
             <fieldset>
                 <legend><b>1. Dados Pessoais</b></legend>
-                <label>Nome Completo: *</label><br>
-                <input type="text" name="nome" size="50" required placeholder="Ex: Maria da Silva"><br><br>
+                <label>Nome Completo: *</label><br />
+                <input type="text" name="nome" size="50" required placeholder="Ex: Maria da Silva" /><br /><br />
 
-                <label>CPF: *</label><br>
-                <input type="text" name="cpf" size="14" maxlength="14" required placeholder="000.000.000-00"><br><br>
+                <label>CPF: *</label><br />
+                <input type="text" name="cpf" id="cpf" size="14" maxlength="14" required
+                    placeholder="000.000.000-00" /><br /><br />
 
-                <label>Data de Nascimento:</label><br>
-                <input type="date" name="nasc"><br>
+                <label>Data de Nascimento:</label><br />
+                <input type="date" name="nasc" id="nasc" /><br />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>2. Contato e Endereço</b></legend>
-                <label>E-mail: *</label><br>
-                <input type="email" name="email" size="40" required placeholder="cliente@email.com"><br><br>
+                <label>E-mail: *</label><br />
+                <input type="email" name="email" id="email" size="40" required
+                    placeholder="cliente@email.com" /><br /><br />
 
-                <label>Telefone / WhatsApp:</label><br>
-                <input type="tel" name="tel" size="15" placeholder="(00) 00000-0000"><br><br>
+                <label>Telefone / WhatsApp:</label><br />
+                <input type="tel" name="tel" id="tel" size="15" placeholder="(00) 00000-0000" /><br /><br />
 
-                <label>Endereço Completo (Rua, Número, Bairro):</label><br>
-                <input type="text" name="endereco" size="60"><br><br>
+                <label>Endereço Completo (Rua, Número, Bairro):</label><br />
+                <input type="text" name="endereco" id="endereco" size="60" /><br /><br />
 
                 <label>Estado (UF):</label>
-                <select name="estado">
+                <select name="estado" id="estado">
                     <option value="">Selecione...</option>
                     <option value="SP">São Paulo</option>
                     <option value="RJ">Rio de Janeiro</option>
@@ -54,12 +60,16 @@
                     <option value="PR">Paraná</option>
                     <option value="OUTRO">Outro Estado</option>
                 </select>
+                <label>Cidade:</label>
+                <select name="cidade" id="cidade">
+                    <option value="">Selecione o estado primeiro</option>
+                </select>
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>3. Perfil de Leitura</b></legend>
-                <label>Gênero Literário Favorito:</label><br>
+                <label>Gênero Literário Favorito:</label><br />
                 <select name="genero_fav">
                     <option>Não Informado</option>
                     <option>Ficção e Fantasia</option>
@@ -67,25 +77,28 @@
                     <option>Terror e Suspense</option>
                     <option>Autoajuda e Negócios</option>
                     <option>Biografias</option>
-                </select><br><br>
+                </select><br /><br />
 
-                <input type="checkbox" name="newsletter" checked>
+                <input type="checkbox" name="newsletter" checked />
                 <label>O cliente aceita receber promoções da livraria por e-mail.</label>
             </fieldset>
-            <br>
+            <br />
 
-                <button type="submit">Salvar Cliente no Sistema</button>
-                <button type="reset">Limpar Formulário</button>
-
+            <button type="submit">Salvar Cliente no Sistema</button>
+            <button type="reset">Limpar Formulário</button>
         </form>
 
-        <br><br>
-            <p><a href="index.html"><b> Voltar ao Painel Principal </b></a></p>
+        <br /><br />
+        <p>
+            <a href="index.html"><b> Voltar ao Painel Principal </b></a>
+        </p>
     </main>
 
-        <footer>
-            <hr>
-            <p><small>Livraria Página Certa - Controle de Clientes</small></p>
-        </footer>
+    <footer>
+        <hr />
+        <p><small>Livraria Página Certa - Controle de Clientes</small></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>

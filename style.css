@@ -1,119 +1,238 @@
-/* 1. Definições Gerais */
+/* style.css - Folha de Estilos Centralizada (Momento II) */
+
+/* 1. SELETOR DE ELEMENTO (Type Selector) & Fontes com Fallback */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f1ea; /* Bege claro moderno */
-    color: #332c28; /* Marrom escuro para leitura */
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  /* Fallback de fonte: se não achar a primeira, tenta a próxima */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfbf7; /* Tom de papel antigo claro */
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
 }
 
-/* 2. Cabeçalho e Rodapé */
-header, footer {
-    background-color: #4b3621;
-    color: #ffffff;
-    text-align: center;
-    padding: 2rem 0;
+/* Agrupamento de Seletores de Elemento */
+h1,
+h2,
+h3,
+legend {
+  font-family: "Georgia", serif; /* Fonte serifada para dar ar de literatura */
+  color: #4b3621; /* Marrom escuro */
+}
+
+/* Estilização do Cabeçalho */
+header {
+  background-color: #f5f5dc; /* Cor de destaque (mostarda claro) */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #8b4513;
 }
 
 header img {
-    border-radius: 50%; /* Deixa a logo circular */
-    border: 3px solid #d4a373;
+  margin-bottom: 10px;
 }
 
-/* 3. Navegação (Menu) */
-nav {
-    background-color: #d4a373;
-    padding: 10px;
-    text-align: center;
-    position: sticky; /* Menu fixo no topo ao rolar */
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: #4b3621;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    padding: 5px 10px;
-    transition: 0.3s; /* Suaviza a animação */
-}
-
-nav a:hover {
-    background-color: #4b3621;
-    color: #fff;
-    border-radius: 5px;
-}
-
-/* 4. Conteúdo Principal */
+/* Container principal (Conteúdo das páginas) */
 main {
-    max-width: 900px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 30px;
-    box-shadow: 0px 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
-    border-radius: 8px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+  border-radius: 8px;
 }
 
-/* 5. Tabelas Modernas */
-table {
-    width: 100%;
-    border-collapse: collapse; /* Remove espaços entre bordas */
-    margin: 20px 0;
+/* 2. SELETOR DESCENDENTE */
+/* Estilizando a lista não ordenada que está DENTRO da tag nav */
+nav {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #4b3621;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor */
+  border-radius: 8px;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
+#menu b {
+  color: #f3ad78;
 }
 
-th {
-    background-color: #4b3621;
-    color: white;
+#menu h2 {
+  color: #f3ad78;
+  margin-left: 310px;
 }
 
-tr:nth-child(even) { background-color: #f9f9f9; } /* Linhas zebradas */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: #4b3621;
+  text-align: center;
+  margin: 0;
+}
 
-/* 6. Formulários Estilizados */
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  padding: 30px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* 3. SELETOR DE PSEUDO-CLASSE */
+nav ul li a:hover {
+  background-color: #8b4513; /* Muda de cor ao passar o mouse */
+  color: #eedc9a;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
+/* 4. SELETOR FILHO (Child Selector) */
+/* Estiliza apenas as seções que são filhas diretas do main */
+main > section {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+}
+
+/* 5. SELETOR DE ATRIBUTO (Requisito: Estilização dos campos input) */
+/* Estiliza os inputs com base no seu atributo "type" */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura da tela */
+  font-family: inherit;
+  font-size: 14px;
+  background-color: #fafafa;
+}
+
+/* Pseudo-classe para foco no input (quando o usuário clica para digitar) */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #8b4513;
+  outline: none;
+  box-shadow: 0 0 5px rgba(139, 69, 19, 0.4); /* Brilho marrom */
+}
+
+/* 6. SELETOR DE PSEUDO-ELEMENTO */
+/* Estiliza os textos de placeholder dentro das caixas de texto */
+::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Estilos de Botões usando Seletores de Atributo */
+button {
+  background-color: #4b3621;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #8b4513;
+}
+
+button[type="reset"] {
+  background-color: #a9a9a9; /* Cor cinza para o botão de limpar */
+}
+
+button[type="reset"]:hover {
+  background-color: #777;
+}
+
+/* Estilização de Formulários (Fieldset e Legend) */
 fieldset {
-    border: 2px solid #d4a373;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
+  border: 2px solid #eedc9a;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fcfbf9;
 }
 
 legend {
-    font-weight: bold;
-    color: #4b3621;
-    padding: 0 10px;
+  background-color: #4b3621;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 3px;
+  font-size: 18px;
 }
 
-input, select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  background-color: #4b3621;
+  color: #fff;
 }
 
-button {
-    background-color: #4b3621;
-    color: white;
-    padding: 12px 25px;
-    border: none;
+footer hr {
+  display: none; /* Escondendo a linha <hr> pois usaremos a cor de fundo */
+}
+
+/* Links genéricos */
+main a {
+  color: #8b4513;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+
+/* ========================================== */
+/* ESTILOS PARA O FORMULÁRIO DE VENDAS        */
+/* ========================================== */
+
+/* Estilo da caixa de cada item de compra */
+.item-compra {
+    border: 1px solid #CCC;
+    padding: 15px;
+    margin-bottom: 15px;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: 0.3s;
+    background-color: #FFFFFF;
 }
 
-button:hover {
-    background-color: #d4a373;
+/* Estilo do botão de adicionar item */
+#btn-adicionar-item {
+    background-color: #D2691E; /* Laranja Escuro */
+    margin-top: 10px;
 }
 
-/* 7. Listas e Glossários */
-dt { font-weight: bold; color: #4b3621; font-size: 1.1em; }
-dd { margin-bottom: 15px; font-style: italic; }
+#btn-adicionar-item:hover {
+    background-color: #A0522D;
+}
+
+/* Estilo do botão de remover item */
+.btn-remover-item {
+    background-color: #CC0000; /* Vermelho para exclusão */
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.btn-remover-item:hover {
+    background-color: #990000;
+}

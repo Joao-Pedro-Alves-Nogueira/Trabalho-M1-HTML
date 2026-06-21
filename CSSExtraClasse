@@ -1,0 +1,25 @@
+Relatório de Utilização de Propriedades CSS Extra-Classe
+
+-  border-radius
+
+Onde foi utilizado: Contentor principal (main), agrupamentos de formulários (fieldset), botões e caixas de texto (input).
+
+Explicação do uso: Utilizado para arredondar os cantos de elementos retangulares. No design moderno, bordas suaves são consideradas mais confortáveis visualmente, melhorando a estética geral da interface.
+
+- box-shadow
+
+Onde foi utilizado: Contentor principal (main) e no efeito de foco dos campos de texto (input:focus).
+
+Explicação do uso: Adiciona uma sombra projetada aos elementos. Foi aplicado no painel principal para criar uma percepção de profundidade (destacando o painel do fundo) e nos inputs para criar um "brilho" que indica claramente ao usuário qual campo está selecionado.
+
+- transition
+
+Onde foi utilizado: Na estilização dos botões (na transição para o estado :hover).
+
+Explicação do uso: Controla a velocidade da mudança de estilos. Foi aplicado para garantir que a alteração de cor, ao passar o cursor sobre os botões, ocorra de maneira fluida e suave, evitando mudanças bruscas na interface.
+
+- box-sizing: border-box
+
+Onde foi utilizado: Na regra de formatação dos campos de dados (input, select, textarea).
+
+Explicação do uso: Altera o comportamento matemático do CSS. Força o navegador a incluir o espaçamento interno (padding) e a espessura da borda dentro da largura total definida (100%), impedindo que as caixas de texto "vazem" e quebrem o alinhamento da página.

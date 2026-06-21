@@ -1,32 +1,37 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro de Autor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-color: #F5F5DC; color: #4B3621;">
-        <header>
-            <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250">
-            <h1>Banco de Autores</h1>
-            <p><i>Registro de escritores para vinculação ao acervo de livros</i></p>
-        </header>
+
+<body>
+    <header>
+        <img src="imagens/logo_livraria.png" alt="Logotipo do Sistema" width="250" />
+        <h1>Banco de Autores</h1>
+        <p><i>Registro de escritores para vinculação ao acervo de livros</i></p>
+    </header>
 
     <main>
         <section>
-            <p>Mantenha o banco de dados de autores atualizado. Essas informações serão exibidas nos totens de consulta para os clientes da loja.</p>
+            <p>
+                Mantenha o banco de dados de autores atualizado. Essas informações
+                serão exibidas nos totens de consulta para os clientes da loja.
+            </p>
         </section>
 
-        <form action="#" method="POST">
-            
+        <form action="#" method="POST" novalidate>
             <fieldset>
                 <legend><b>1. Dados Pessoais</b></legend>
-                <label>Nome do Autor / Pseudônimo: *</label><br>
-                <input type="text" name="nome_autor" size="50" required placeholder="Ex: Machado de Assis"><br><br>
+                <label>Nome do Autor / Pseudônimo: *</label><br />
+                <input type="text" name="nome_autor" size="50" required
+                    placeholder="Ex: Machado de Assis" /><br /><br />
 
-                <label>Nacionalidade:</label><br>
-                <input type="text" name="nacionalidade" list="lista-paises" placeholder="Selecione ou digite">
+                <label>Nacionalidade:</label><br />
+                <input type="text" name="nacionalidade" list="lista-paises" placeholder="Selecione ou digite" />
                 <datalist id="lista-paises">
                     <option value="Brasileira"></option>
                     <option value="Norte-americana"></option>
@@ -34,48 +39,53 @@
                     <option value="Portuguesa"></option>
                     <option value="Francesa"></option>
                     <option value="Japonesa"></option>
-                </datalist><br><br>
+                </datalist><br /><br />
 
-                <label>Data de Nascimento:</label><br>
-                <input type="date" name="data_nasc"> 
+                <label>Data de Nascimento:</label><br />
+                <input type="date" name="data_nasc" />
                 &nbsp;&nbsp;&nbsp; <label>Data de Falecimento (se aplicável):</label>
-                <input type="date" name="data_falec">
+                <input type="date" name="data_falec" />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>2. Perfil Literário</b></legend>
-                
-                <label>Biografia Resumida (Máx. 500 caracteres):</label><br>
-                <textarea name="biografia" rows="6" cols="70" maxlength="500" placeholder="Escreva um breve resumo sobre a vida e as principais obras do autor..."></textarea><br><br>
+
+                <label>Biografia Resumida (Máx. 500 caracteres):</label><br />
+                <textarea name="biografia" rows="6" cols="70" maxlength="500"
+                    placeholder="Escreva um breve resumo sobre a vida e as principais obras do autor..."></textarea><br /><br />
             </fieldset>
-            <br>
+            <br />
 
             <fieldset>
                 <legend><b>3. Configurações de Sistema</b></legend>
-                <label>Status do Autor no Banco de Dados:</label><br>
-                <input type="radio" name="status_autor" value="ativo" checked> Ativo (Temos livros dele no momento)<br>
-                <input type="radio" name="status_autor" value="inativo"> Inativo (Fora de catálogo)<br><br>
+                <label>Status do Autor no Banco de Dados:</label><br />
+                <input type="radio" name="status_autor" value="ativo" checked /> Ativo
+                (Temos livros dele no momento)<br />
+                <input type="radio" name="status_autor" value="inativo" /> Inativo
+                (Fora de catálogo)<br /><br />
 
-                <input type="checkbox" name="destaque" value="sim">
-                <label><b>Autor em Destaque</b> (Exibir na página inicial do site da loja)</label>
+                <input type="checkbox" name="destaque" value="sim" />
+                <label><b>Autor em Destaque</b> (Exibir na página inicial do site da
+                    loja)</label>
             </fieldset>
-            <br>
+            <br />
 
-                <button type="submit">Gravar Autor no Banco de Dados</button>
-                <button type="reset">Limpar Dados</button>
-
+            <button type="submit">Gravar Autor no Banco de Dados</button>
+            <button type="reset">Limpar Dados</button>
         </form>
 
-        <br><br>
-            <p><a href="index.html"><b> Voltar ao Painel Principal </b></a></p>
+        <br /><br />
+        <p>
+            <a href="index.html"><b> Voltar ao Painel Principal </b></a>
+        </p>
     </main>
 
-
-        <footer>
-            <hr>
-            <p><small>Livraria Página Certa - Gestão de Dados de Autores</small></p>
-        </footer>
-
+    <footer>
+        <hr />
+        <p><small>Livraria Página Certa - Gestão de Dados de Autores</small></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 </html>
