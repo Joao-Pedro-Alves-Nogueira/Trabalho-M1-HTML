@@ -1,5 +1,29 @@
 TRABALHO DE HTML, CSS E JAVASCRIPT DO 1 SEMESTRE DE 2026 DE TECNOLOGIAS PARA INTERNET DO FELIX, UM SISTEMA INTERNO DE BIBLIOTECA 
 
+index.html - Página inicial / painel principal. Tem o menu de navegação (<nav id="menu">) que linka pra todas as outras páginas.
+
+style.css - Folha de estilo única usada por todas as páginas — cores, fontes, formatação dos formulários, botões, menu etc.
+
+script.js - JavaScript central com as validações dos formulários (campos obrigatórios, CPF, e-mail, telefone), o combo Estado→Cidade dinâmico, e o botão de adicionar/remover item na tela de vendas.
+
+cad_cliente.html - Formulário de cadastro de clientes (nome, CPF, contato, endereço, gênero literário favorito).
+
+cad_livro.html - Formulário de cadastro de livros no estoque (título, ISBN, autor, preço, quantidade).
+
+cad_autor.html - Formulário de cadastro de autores (nome, nacionalidade, biografia, status ativo/inativo).
+
+cad_fornecedor.html - Formulário de cadastro de fornecedores/editoras (razão social, CNPJ, contato, condições de pagamento).
+
+cad_venda.html - Tela de frente de caixa — registra uma venda com CPF do cliente, itens comprados (dinâmico, dá pra adicionar mais livros) e forma de pagamento.
+
+faq.html - Página de perguntas frequentes / suporte pros colaboradores do sistema.
+
+glossario.html - Glossário com termos técnicos do mercado editorial (ISBN, tiragem, best-seller etc).
+
+politicas.html - Regras internas de troca e devolução de livros, com passo a passo.
+
+sobre.html - Página institucional contando a história da livraria, missão/visão/valores e tabela de filiais.
+
 
 
 
